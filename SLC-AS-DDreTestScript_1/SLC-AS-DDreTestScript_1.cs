@@ -19,7 +19,7 @@ namespace SLC_AS_DDreTestScript_1
 		public void Run(IEngine engine)
 		{
 			engine.GenerateInformation("Hello World");
-            var order = OrderFactory.CreateOrder("Order 1");
+            var order = OrderFactory.CreateOrder("Pizza Bolo");
 			order.Dispatch("Dennis Dreesen");
         }
 	}

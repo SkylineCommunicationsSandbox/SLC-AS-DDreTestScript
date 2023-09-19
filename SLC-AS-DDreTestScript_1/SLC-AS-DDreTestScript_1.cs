@@ -3,12 +3,13 @@ namespace SLC_AS_DDreTestScript_1
 	using System;
 	using System.Collections.Generic;
 	using System.Globalization;
-	using System.Text;
-	using Skyline.DataMiner.Automation;
-	
-	/// <summary>
-	/// Represents a DataMiner Automation script.
-	/// </summary>
+    using System.Text;
+    using Empower.Library.Room0;
+    using Skyline.DataMiner.Automation;
+
+    /// <summary>
+    /// Represents a DataMiner Automation script.
+    /// </summary>
 	public class Script
 	{
 		/// <summary>
@@ -17,8 +18,9 @@ namespace SLC_AS_DDreTestScript_1
 		/// <param name="engine">Link with SLAutomation process.</param>
 		public void Run(IEngine engine)
 		{
-			engine.GenerateInformation("Hello World123456");
-
-		}
+			engine.GenerateInformation("Hello World");
+            var order = OrderFactory.CreateOrder("Order 1");
+			order.Dispatch("Dennis Dreesen");
+        }
 	}
 }
